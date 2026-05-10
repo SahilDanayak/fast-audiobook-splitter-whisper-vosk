@@ -1,12 +1,12 @@
 # fast-audiobook-splitter-whisper-vosk
 
-**Automatically split audiobooks and podcasts into chapters by keyword — fast.**
+**Automatically split audiobooks and podcasts into chapters by keyword.**
 
-**Why was this tool created?**
+### Why was this tool created?
 
 Unlike other tools that transcribe the entire 10-hour file (taking hours), this tool only transcribes 10-second snippets around detected silences, finishing in minutes.
 
-**How does it work?**
+### How does it work?
 
 Hybrid pipeline: FFmpeg silence detection → Vosk offline keyword spotting → OpenAI Whisper verification. Lossless splitting, no re-encoding. ~3–5 minutes for a 10-hour audiobook.
 
