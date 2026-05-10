@@ -1,6 +1,6 @@
 # fast-audiobook-splitter-whisper-vosk
 
-**Automatically split audiobooks and podcasts into chapters by keyword.**
+**Automatically split audiobooks and podcasts into chapters by keyword — faster than Whisper-only tools, more accurate than silence-only tools. FFmpeg + Vosk + OpenAI Whisper hybrid pipeline. Python CLI. MP3, M4B, M4A, FLAC, OGG.**
 
 ### Why was this tool created?
 
@@ -220,6 +220,16 @@ unzip vosk-model-small-en-us-0.15.zip && mv vosk-model-small-en-us-0.15 model
 - [openai-whisper](https://github.com/openai/whisper) — high-accuracy ASR for boundary verification
 - [tqdm](https://github.com/tqdm/tqdm) — progress bars
 
+## Alternatives
+
+| Tool | Approach | Chapter Detection | Speed |
+|------|----------|-------------------|-------|
+| Chapterize-Audiobooks | ML only | ✅ | ⭐⭐⭐ |
+| Whisper-Audiobook-Splitter | Full Whisper scan | ✅ High accuracy | ⭐⭐ |
+| m4b-tool | Metadata / silence | ❌ Requires metadata | ⭐⭐⭐⭐⭐ |
+| audiobook-split-ffmpeg | Stream copy only | ❌ No detection | ⭐⭐⭐⭐⭐ |
+| audiosplitter | Silence only | ❌ No ASR | ⭐⭐⭐⭐ |
+| **Fast Audiobook Splitter** | Silence + Vosk + Whisper | ✅ Keyword-based | ⭐⭐⭐⭐⭐ |
 ---
 
 ## License
