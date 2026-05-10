@@ -1,0 +1,3 @@
+vosk>=0.3.45
+openai-whisper>=20240314
+tqdm>=4.65.0
